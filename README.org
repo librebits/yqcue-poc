@@ -11,6 +11,13 @@ See samples folder, and resources below !
 *** nicely documented
 *** "Linux/unixy based systems" style syntax (closer to Hugo templating sytnax) 
 *** 100% portable, as any Bash scripting tool, obviously :-) 
+*** front-matter processing oriented :
+
+  https://mikefarah.gitbook.io/yq/usage/front-matter
+  
+*** with a simple Yq 'oneliner' - command we can update multiple content files :
+
+  https://mikefarah.gitbook.io/yq/usage/tips-and-tricks#update-multiple-files
 
 * Resources :
 
