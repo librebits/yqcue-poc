@@ -4,8 +4,13 @@ Parsing YAML with Yq
 
 See samples folder, and resources below !
 
+** Yq pro's
 
-
+*** (super) fast (written in Go)
+*** easy install : just 'apt install yq' (Debian/Ubuntu)
+*** nicely documented
+*** "Linux/unixy based systems" style syntax (closer to Hugo templating sytnax) 
+*** 100% portable, as any Bash scripting tool, obviously :-) 
 
 * Resources :
 
