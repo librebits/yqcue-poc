@@ -19,6 +19,10 @@ See samples folder, and resources below !
 
   https://mikefarah.gitbook.io/yq/usage/tips-and-tricks#update-multiple-files
 
+** prune - remove YAML objects at wish :
+
+  https://mikefarah.gitbook.io/yq/operators/path#set-path-to-prune-deep-paths
+  
 * Resources :
 
 - Yq project :
