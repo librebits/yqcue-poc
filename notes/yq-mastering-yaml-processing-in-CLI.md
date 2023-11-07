@@ -2,13 +2,12 @@
 https://dev.to/martinheinz/yq-mastering-yaml-processing-in-command-line-o0g
 by Martin Heinz
 
-yq: Mastering YAML Processing in Command Line
-#devops
-#yaml
-#tutorial
+# yq: Mastering YAML Processing in Command Line
+
 
 Nowadays, YAML is used for configuring almost everything (for better or worse), so whether you're DevOps engineer working with Kubernetes or Ansible, or developer configuring logging in Python or CI/CD with GitHub Actions - you have to deal with YAML files at least from time-to-time. Therefore, being able to efficiently query and manipulate YAML is essential skill for all of us - engineers. The best way to learn that is by mastering YAML processing tool such as yq, which can make you way more efficient at many of your daily tasks, from simple lookups to complex manipulations. So, let's go through and learn all that yq has to offer - including traversing, selecting, sorting, reducing and much more!
-Setting Up
+
+## Setting Up
 
 Before we begin using yq, we first need to install it. When you google yq though, you will find two projects/repositories. First of them, at https://github.com/kislyuk/yq is wrapper around jq - the JSON processor. If you're already familiar with jq you might want to grab this one and use the syntax you already know. In this article though, we will use the other - a bit more popular project - from https://github.com/mikefarah/yq. This version does not 100% match the jq syntax, but its advantage is that it's dependency free (does not depend on jq), for more context on the differences, see following GitHub issue.
 
