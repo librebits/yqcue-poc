@@ -1,0 +1,13 @@
+* YAML sculpting - Yq  powered by
+
+Parsing YAML with Yq
+
+**
+
+
+
+
+
+* Resources :
+
+- [[Parsing YAML with Yq][https://www.sanderh.dev/parsing-YAML-files-using-yq/]]
