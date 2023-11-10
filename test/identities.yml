@@ -1,0 +1,7 @@
+identities:
+- arn: "arn:aws:iam::ARN1"
+  group: "system:masters"
+  user: "user1"
+- arn: "arn:aws:iam::ARN2"
+  group: "system:masters"
+  user: "user2"

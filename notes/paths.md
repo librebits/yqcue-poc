@@ -11,7 +11,7 @@ a:
 
 then
 
-yq '.a.b | path' sample.yml
+$ yq '.a.b | path' sample.yml
 
 will output
 
@@ -21,11 +21,16 @@ will output
 Get map key
 
 Given a sample.yml file of:
+
 a:
   b: cat
+
 then
-yq '.a.b | path | .[-1]' sample.yml
+
+$ yq '.a.b | path | .[-1]' sample.yml
+
 will output
+
 b
 
 ## Array path
@@ -36,7 +41,7 @@ a:
   - dog
 then
 
-yq '.a.[] | select(. == "dog") | path' sample.yml
+$ yq '.a.[] | select(. == "dog") | path' 
 
 will output
 
@@ -52,7 +57,7 @@ a:
 
 then
 
-yq '.a.[] | select(. == "dog") | path | .[-1]' sample.yml
+$ yq '.a.[] | select(. == "dog") | path | .[-1]' sample.yml
 
 will output
 
@@ -68,7 +73,7 @@ a:
 
 then
 
-yq '.a[] | select(. == "*og") | [{"path":path, "value":.}]' sample.yml
+$ yq '.a[] | select(. == "*og") | [{"path":path, "value":.}]' sample.yml
 
 will output
 
@@ -90,7 +95,7 @@ a:
 
 then
 
-yq 'setpath(["a", "b"]; "things")' sample.yml
+$ yq 'setpath(["a", "b"]; "things")' sample.yml
 
 will output
 
@@ -101,7 +106,7 @@ a:
 
 Running
 
-yq --null-input 'setpath(["a", "b"]; "things")'
+$ yq --null-input 'setpath(["a", "b"]; "things")'
 
 will output
 
@@ -120,60 +125,96 @@ parentB:
 parentC:
   child1: me child1
   child2: me child2
+
 then
-yq '(.parentB.child2, .parentC.child1) as $i
+
+$ yq '(.parentB.child2, .parentC.child1) as $i
   ireduce({}; setpath($i | path; $i))' sample.yml
+
 will output
+
 parentB:
   child2: i am child2
 parentC:
   child1: me child1
-Set array path
+
+
+## Set array path
 Given a sample.yml file of:
+
 a:
   - cat
   - frog
+
 then
-yq 'setpath(["a", 0]; "things")' sample.yml
+
+$ yq 'setpath(["a", 0]; "things")' sample.yml
+
 will output
+
 a:
   - things
   - frog
-Set array path empty
+
+## Set array path empty
+
 Running
-yq --null-input 'setpath(["a", 0]; "things")'
+
+$ yq --null-input 'setpath(["a", 0]; "things")'
+
 will output
+
 a:
   - things
-Delete path
+
+## Delete path
+
 Notice delpaths takes an array of paths.
 Given a sample.yml file of:
+
 a:
   b: cat
   c: dog
   d: frog
+
 then
-yq 'delpaths([["a", "c"], ["a", "d"]])' sample.yml
+
+$ yq 'delpaths([["a", "c"], ["a", "d"]])' sample.yml
+
 will output
+
 a:
   b: cat
-Delete array path
+
+## Delete array path
 Given a sample.yml file of:
+
 a:
   - cat
   - frog
+
 then
-yq 'delpaths([["a", 0]])' sample.yml
+
+$ yq 'delpaths([["a", 0]])' sample.yml
+
 will output
+
 a:
   - frog
-Delete - wrong parameter
+
+## Delete - wrong parameter
 delpaths does not work with a single path array
+
 Given a sample.yml file of:
+
 a:
   - cat
   - frog
+
 then
-yq 'delpaths(["a", 0])' sample.yml
+
+$ yq 'delpaths(["a", 0])' sample.yml
+
 will output
+
 Error: DELPATHS: expected entry [0] to be a sequence, but its a !!str. Note that delpat

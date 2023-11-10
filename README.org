@@ -27,8 +27,11 @@ See samples folder, and resources below !
 
 - Yq project :
   https://mikefarah.gitbook.io/yq/
-
+  
+- [[Parsing YAML with Yq][https://www.sanderh.dev/parsing-YAML-files-using-yq/]]
+  
+  
 - Mastering YAML processing in the CLI :
   https://dev.to/martinheinz/yq-mastering-yaml-processing-in-command-line-o0g
 
-- [[Parsing YAML with Yq][https://www.sanderh.dev/parsing-YAML-files-using-yq/]]
+
